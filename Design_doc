@@ -1,0 +1,110 @@
+# Automation Framework Design Document
+
+## 1. Introduction
+
+This document describes the design and architecture of the Selenium automation framework developed for testing the DemoQA application.
+
+---
+
+## 2. Objective
+
+To build a scalable, maintainable, and reusable automation framework using industry best practices.
+
+---
+
+## 3. Architecture
+
+The framework follows the **Page Object Model (POM)** pattern.
+
+### Layers:
+
+* Test Layer → Contains test cases
+* Page Layer → Contains UI interaction logic
+* Base Layer → Driver setup and reusable methods
+* Utility Layer → Helpers (waits, screenshots, reports)
+
+---
+
+## 4. Components
+
+### 4.1 Base Classes
+
+* `BaseTest` → Handles browser setup & teardown
+* `BasePage` → Common actions (click, type, waits)
+
+---
+
+### 4.2 Page Classes
+
+Each page contains:
+
+* Locators
+* Action methods
+
+Examples:
+
+* FormPage
+* WebTablePage
+* ElementsPage
+* FramesPage
+* WidgetsPage
+
+---
+
+### 4.3 Test Classes
+
+* Contain test scenarios
+* Use TestNG annotations
+* Validate expected behavior
+
+---
+
+### 4.4 Utilities
+
+* Screenshot Utility
+* Extent Report Integration
+* Wait handling
+
+---
+
+## 5. Design Principles
+
+* Separation of concerns
+* Reusability
+* Maintainability
+* Readability
+
+---
+
+## 6. Exception Handling
+
+* Explicit waits used to handle dynamic elements
+* JavaScriptExecutor used where standard click fails
+
+---
+
+## 7. Reporting
+
+* Extent Reports for test execution summary
+* Screenshots for failure analysis
+
+---
+
+## 8. Limitations
+
+* DemoQA site has dynamic ads affecting stability
+* Some components required workaround handling
+
+---
+
+## 9. Future Enhancements
+
+* Data-driven testing
+* CI/CD integration
+* Cross-browser execution
+
+---
+
+## 10. Conclusion
+
+The framework successfully demonstrates automation of key UI components with a clean and scalable design.

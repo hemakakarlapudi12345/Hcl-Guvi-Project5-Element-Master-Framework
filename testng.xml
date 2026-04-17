@@ -1,0 +1,11 @@
+<suite name="ElementMasterSuite">
+    <test name="All Tests">
+        <classes>
+            <class name="tests.FormTest"/>
+            <class name="tests.ElementsTest"/>
+            <class name="tests.WebTableTest"/>
+            <class name="tests.FramesTest"/>
+<class name="tests.WidgetsTest"/>
+        </classes>
+    </test>
+</suite>

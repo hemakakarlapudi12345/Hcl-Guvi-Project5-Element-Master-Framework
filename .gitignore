@@ -1,0 +1,13 @@
+target/
+*.log
+.idea/
+*.iml
+*.project
+*.classpath
+.settings/
+.DS_Store
+Thumbs.db
+test-output/
+*.tmp
+*.bak
+drivers/
